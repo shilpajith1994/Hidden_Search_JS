@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* ==========================================================================
-   1. CSS Reset Code
-   ========================================================================== */
+1. CSS Reset Code
+========================================================================== */
 
 /* 1.1. Eric Meyers Reset
-   http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-   ========================================================================== */
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+========================================================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -70,7 +70,7 @@ sup { top: -.7em; }
 sub { bottom: -.25em; }
 
 /* 1.2. Clear Fix
-   ========================== */
+========================== */
 
 .cf:before,
 .cf:after {
@@ -103,52 +103,67 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+
+* ,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 /*=================================
-  Header styling starts here
+main styling starts here
 =================================*/
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7565F0;
+}
 
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
+.textbox { 
+  width: 38px;
+  height:40px;
+}
 
+.search-icon {
+  position: absolute;
+  top: 1;
+  right: 0;
+  text-indent: -9999px;
+  
+}
 
+.search-icon::before {
+  content: "\f002";
+  padding: 10px;
+  float: right;
+  background-color: #fff;
+  font-family: "fontAwesome";
+  font-size: 18px;
+  text-indent: 0;
+}
 
+.textbox.active { 
+  width: 260px;
+  height: 40px;
+  padding: 10px;
+  transition: .5s ease-in-out;
+}
+
+.textbox:focus { outline: 0; }
 
 /*=================================
-  Header styling ends here
-=================================*/  
-
-/*=================================
-  main styling starts here
+main styling ends here
 =================================*/
-
-
-
-
-
-
-
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
